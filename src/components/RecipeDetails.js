@@ -54,12 +54,16 @@ class RecipeDetails extends Component {
 			ingredients
 		} = this.state.recipe;
 
-		console.log(this.state.recipe);
+	const {handleIndex} = this.props;
+
 		return(
 			<React.Fragment>
 				<div className="container">
 					<div className="row">
-						<button type="button" className="btn btn-warning mb-5 text-capitalize">
+						<button 
+							type="button" 
+							className="btn btn-warning mb-5 text-capitalize"
+							onClick={()=>handleIndex(1)}>
 							back to recipe list
 						</button>
 						<img src={image_url} className="d-block w-100" alt="recipe" />
